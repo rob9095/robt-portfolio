@@ -39,18 +39,17 @@ a:hover {
 }
 
 a.btn {
-	border-radius: 4px;
-	text-transform: uppercase;
+	border-radius: 50px;
 	font-weight: bold;
 	text-align: center;
 	background: linear-gradient(145deg, #67D690,#00A99D);
 	opacity: 1;
+	padding: 20px 46px;
 }
 
 section {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding: 100px 80px;
 }
 
@@ -70,6 +69,8 @@ section h3.title {
 section p {
 	line-height: 2;
 	margin-bottom: 20px;
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 800px) {
@@ -151,10 +152,10 @@ header nav li {
 
 .hero-text {
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 	width: 40%;
 }
 
@@ -170,10 +171,6 @@ header nav li {
 .hero h3 {
 	font: normal 20px "Montserrat", sans-serif;
 	margin-bottom: 40px;
-}
-
-.hero a.btn {
-	padding: 20px 46px; 
 }
 
 .hero-content-area {
@@ -202,4 +199,80 @@ header nav li {
 	.hero h3 {
 		padding: 15px 40px;
 	}
+}
+
+
+/* About */
+
+section.about {
+	min-height: 700px;
+	justify-content: center;
+	width: 100%;
+	background-size: cover;
+	background-image: url(../img/about-bg.png);	
+}
+
+.about-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.about-wrapper .about-text {
+	width: 100%;
+	padding: 0px 30px 30px 0px;
+}
+
+.about-skills {
+	margin-top: -30px;
+}
+
+
+/* Projects */
+
+section.projects {
+		left: 0;
+    width: 100%;
+		background-size: cover;
+		background-image: url(../img/purple-projects-bg.png);
+		color: #fff;
+}
+
+.projects .title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.projects-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 0px;
+}
+
+.projects-wrapper .project-card {
+	background: #fff;
+	color: #555;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 100px 0 rgba(42, 43, 46, 0.4);
+	padding: 30px;
+	margin: 0px 30px;
+}
+
+.project-card img {
+	width: 80px;
+	margin: 20px 0px;
+}
+
+.project-card p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: .788rem;
+}
+
+.project-card .btn {
+	width: 100%;
 }
