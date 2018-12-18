@@ -276,3 +276,21 @@ section.projects {
 .project-card .btn {
 	width: 100%;
 }
+
+/* Contact */
+
+section.contact {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section.contact img {
+	max-width: 160px;
+	margin: 0 auto;
+}
+
+section.contact .btn {
+	width: 200px;
+	margin: 0 auto;
+}
