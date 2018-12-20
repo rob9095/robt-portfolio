@@ -21,6 +21,7 @@ html {
 	font: normal 16px sans-serif;
 	color: #555;
 	font-family: Gilroy;
+	width: 100%;
 }
 
 ul,
@@ -124,6 +125,19 @@ header nav li {
 	}
 }
 
+@media (max-width: 800px) {
+	.flex-col-mobile {
+		flex-direction: column;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.flex-col-tablet {
+		flex-direction: column;
+	}
+}
+
 /* Hero Styles */
 
 .hero {
@@ -168,8 +182,8 @@ header nav li {
 	margin-bottom: 15px;
 }
 
-.hero h3 {
-	font: normal 20px "Montserrat", sans-serif;
+.hero p {
+	font: normal 18px "Montserrat", sans-serif;
 	margin-bottom: 40px;
 }
 
@@ -196,8 +210,26 @@ header nav li {
 		font-size: 40px;
 	}
 	
-	.hero h3 {
+	.hero p {
 		padding: 15px 40px;
+	}
+
+	section.hero {
+		padding-top: 100px;
+	}
+
+	.hero-image {
+		width: 100%;
+		text-align: center;
+	}
+	.hero-image img {
+		width: 100%;
+	}
+	.hero-text {
+		width: 100%;
+	}
+	.hero-text p {
+		padding: 0px;
 	}
 }
 
@@ -226,6 +258,15 @@ section.about {
 	margin-top: -30px;
 }
 
+@media (max-width: 800px) {
+	.about-wrapper .about-text {
+		padding: 0px;
+	}
+	.about-skills {
+		margin-top: 15px;
+	}
+}
+
 
 /* Projects */
 
@@ -246,7 +287,6 @@ section.projects {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 30px 0px;
 }
 
 .projects-wrapper .project-card {
@@ -260,7 +300,7 @@ section.projects {
 	border-radius: 15px;
 	box-shadow: 0px 10px 100px 0 rgba(42, 43, 46, 0.4);
 	padding: 30px;
-	margin: 0px 30px;
+	margin: 30px;
 }
 
 .project-card img {
@@ -293,4 +333,53 @@ section.contact img {
 section.contact .btn {
 	width: 200px;
 	margin: 0 auto;
+}
+
+@media (max-width: 800px){
+	section.contact img {
+		width: 120px;
+	}
+}
+
+/* Footer */
+footer {
+	position: relative;
+	background: #4c2d80;
+}
+
+footer .footer-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 35px 35px 10px;
+}
+
+.footer-wrapper div {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+
+footer .credit {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	padding: 10px;
+}
+
+footer .credit a {
+	font-size: 13px;
+}
+
+
+footer .logo {
+	justify-content: flex-start;
+}
+
+footer .social-icons {
+	justify-content: flex-end;
 }
