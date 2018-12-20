@@ -44,8 +44,13 @@ a.btn {
 	font-weight: bold;
 	text-align: center;
 	background: linear-gradient(145deg, #67D690,#00A99D);
-	opacity: 1;
 	padding: 20px 46px;
+	cursor: pointer;
+	letter-spacing: .5px;
+}
+
+a.btn:hover {
+	opacity: .8;
 }
 
 section {
