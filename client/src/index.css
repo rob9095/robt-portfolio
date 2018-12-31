@@ -1,0 +1,380 @@
+/* Global Styles */
+
+@font-face {
+  font-family: Gilroy;
+  src: url("./fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-weight: bold;
+  src: url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+font: normal 16px sans-serif;
+color: #555;
+font-family: Gilroy;
+width: 100%;
+}
+
+ul,
+nav {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+opacity: 075;
+color: #fff;
+}
+
+a:hover {
+opacity: 1;
+}
+
+a.btn {
+border-radius: 50px;
+font-weight: bold;
+text-align: center;
+background: linear-gradient(145deg, #67D690,#00A99D);
+padding: 20px 46px;
+cursor: pointer;
+letter-spacing: .5px;
+}
+
+a.btn:hover {
+opacity: .8;
+}
+
+section {
+display: flex;
+flex-direction: column;
+padding: 100px 80px;
+}
+
+hr {
+width: 250px;
+height: 3px;
+background-color: #3f51b5;
+border: 0;
+margin-bottom: 50px;
+}
+
+section h3.title {
+font: bold 32px "Gilroy", sans-serif;
+margin-bottom: 30px;
+}
+
+section p {
+line-height: 2;
+margin-bottom: 30px;
+font-size: 16px;
+font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 800px) {
+section {
+  padding: 50px 20px;
+}
+}
+
+/* Header Styles */
+
+header {
+position: absolute;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 35px 100px 0;
+animation: 1s fadein 0.5s forwards;
+opacity: 0;
+color: #fff;
+z-index: 1;
+}
+
+@keyframes fadein {
+100% {
+  opacity: 1;
+}
+}
+
+header h2 {
+font-family: "Gilroy", Sans-serif;
+font-size: 20px;
+}
+
+header nav {
+display: flex;
+margin-right: -15px;
+}
+header nav li {
+margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+header {
+  padding: 20px 50px;
+  flex-direction: column;
+}
+
+header h2 {
+  margin-bottom: 15px;
+}
+}
+
+@media (max-width: 800px) {
+.flex-col-mobile {
+  flex-direction: column;
+}
+}
+
+
+@media (max-width: 1200px) {
+.flex-col-tablet {
+  flex-direction: column;
+}
+}
+
+/* Hero Styles */
+
+.hero {
+position: relative;
+justify-content: center;
+text-align:center;
+min-height: 100vh;
+color: #fff;
+overflow: hidden;
+}
+
+.hero .background-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-size: cover;
+z-index: -1;
+background-color: #4c2d80;
+}
+
+.hero-image img {
+  max-width: 890px;
+}
+
+.hero-text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+text-align: left;
+width: 40%;
+}
+
+.hero-image {
+width: 60%;
+}
+
+.hero h1 {
+font: bold 50px "Gilroy", sans-serif;
+margin-bottom: 15px;
+}
+
+.hero p {
+font: normal 18px "Montserrat", sans-serif;
+margin-bottom: 40px;
+}
+
+.hero-content-area {
+opacity: 0;
+  margin-top: 100px;
+  animation: 1s slidefade 1s forwards;
+  display: flex;
+}
+
+@keyframes slidefade {
+100% {
+  opacity: 1;
+  margin: 0;
+}
+}
+
+@media (max-width: 800px) {
+.hero {
+  min-height: 600px;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.hero p {
+  padding: 15px 40px;
+}
+
+section.hero {
+  padding-top: 100px;
+}
+
+.hero-image {
+  width: 100%;
+  text-align: center;
+}
+.hero-image img {
+  width: 100%;
+}
+.hero-text {
+  width: 100%;
+}
+.hero-text p {
+  padding: 0px;
+}
+}
+
+
+/* About */
+
+section.about {
+min-height: 700px;
+justify-content: center;
+width: 100%;
+background-size: cover;
+background-image: url("./img/about-bg.png");	
+}
+
+.about-wrapper {
+display: flex;
+justify-content: center;
+}
+
+.about-wrapper .about-text {
+width: 100%;
+padding: 0px 30px 30px 0px;
+}
+
+@media (max-width: 800px) {
+.about-wrapper .about-text {
+  padding: 0px;
+}
+}
+
+
+/* Projects */
+
+section.projects {
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-image: url("./img/purple-projects-bg.png");
+  color: #fff;
+}
+
+.projects .title {
+margin-bottom: 60px;
+text-align: center;
+}
+
+.projects-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.projects-wrapper .project-card {
+background: #fff;
+color: #555;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 300px;
+border-radius: 15px;
+box-shadow: 0px 10px 100px 0 rgba(42, 43, 46, 0.4);
+padding: 30px;
+margin: 30px;
+}
+
+.project-card img {
+width: 80px;
+margin: 20px 0px;
+}
+
+.project-card p {
+font-family: 'Montserrat', sans-serif;
+font-size: .788rem;
+}
+
+.project-card .btn {
+width: 100%;
+}
+
+/* Contact */
+
+section.contact {
+max-width: 700px;
+margin: 0 auto;
+text-align: center;
+}
+
+section.contact img {
+max-width: 160px;
+margin: 0 auto;
+}
+
+section.contact .btn {
+width: 200px;
+margin: 0 auto;
+}
+
+@media (max-width: 800px){
+section.contact img {
+  width: 120px;
+}
+}
+
+/* Footer */
+footer {
+position: relative;
+background: #442467;
+}
+
+footer .footer-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px 35px;
+}
+
+.footer-wrapper div {
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+footer .logo {
+align-items: flex-start;
+flex-direction: column;
+}
+
+footer .logo p {
+font-size: 12px;
+}
+
+footer .social-icons {
+justify-content: flex-end;
+}
+
+footer .social-icons i {
+margin-left: 15px;
+font-size: 25px;
+}
