@@ -93,6 +93,41 @@ section {
 /* Header Styles */
 
 header {
+  position: relative;
+  background: transparent;
+}
+
+header .header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 35px;
+}
+
+.header-wrapper div, .header-wrapper nav {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+header .logo {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.header-wrapper nav {
+  margin-right: -15px;
+  justify-content: flex-end;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+/* 
+header {
   position: absolute;
   width: 100%;
   display: flex;
@@ -146,7 +181,7 @@ header h2 {
 .flex-col-tablet {
   flex-direction: column;
 }
-}
+} */
 
 /* Hero Styles */
 
@@ -157,6 +192,7 @@ header h2 {
   min-height: 100vh;
   color: #fff;
   overflow: hidden;
+  margin-top: -65px;
 }
 
 .hero .background-image {

@@ -7,15 +7,28 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <header>
+          {/* <header>
             <h2><a href="#">Rob Tucker</a></h2>
             <nav>
               <li><a href="#">About</a></li>
               <li><a href="#">Projects</a></li>
               <li><a href="#">Contact</a></li>
             </nav>
-          </header>
-          
+          </header> */}
+          <header>
+            <div className="container">
+              <div className="header-wrapper">
+                <div className="logo">
+                  <h3>Rob Tucker</h3>
+                </div>
+                <nav>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Contact</a></li>
+                </nav>
+              </div>
+            </div>
+          </header>         
           <section className="hero">
             <div className="background-image" style={{
               backgroundImage: `url(${heroBg})`,
