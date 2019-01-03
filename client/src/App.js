@@ -99,10 +99,12 @@ class App extends Component {
           </section>
           <section className="contact">
           <div className="container">
-            <img src={require('./img/mail-icon.png')} />		
-            <h3 className="title">Interested in working together?</h3>
-            <p>Feel free to contact me if you'd like to work together, have any questions, or just want to chat.</p>
-            <a className="btn">Contact Me</a>
+            <div className="contact-wrapper">
+              <img src={require('./img/mail-icon.png')} />		
+              <h3 className="title">Interested in working together?</h3>
+              <p>Feel free to contact me if you'd like to work together, have any questions, or just want to chat.</p>
+              <a className="btn">Contact Me</a>
+            </div>
           </div>
           </section>
           <footer>

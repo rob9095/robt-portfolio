@@ -57,6 +57,7 @@ section {
   display: flex;
   flex-direction: column;
   padding: 100px 80px;
+  align-items: center;
 }
 
 hr {
@@ -80,21 +81,53 @@ section p {
 }
 
 @media (max-width: 800px) {
-section {
-  padding: 50px 20px;
+  section {
+    padding: 50px 20px;
+  }
 }
+
+@media (max-width: 800px) {
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .flex-col-tablet {
+    flex-direction: column;
+  }
 }
 
 .container {
-  max-width: 1600px;
-  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: calc(100% - 50px);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: calc(100% - 90px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }  
 }
 
 /* Header Styles */
 
 header {
   position: relative;
-  background: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
 header .header-wrapper {
@@ -169,19 +202,7 @@ header h2 {
   margin-bottom: 15px;
 }
 }
-
-@media (max-width: 800px) {
-.flex-col-mobile {
-  flex-direction: column;
-}
-}
-
-
-@media (max-width: 1200px) {
-.flex-col-tablet {
-  flex-direction: column;
-}
-} */
+*/
 
 /* Hero Styles */
 
@@ -233,7 +254,6 @@ header h2 {
   margin-top: 100px;
   animation: 1s slidefade 1s forwards;
   display: flex;
-  justify-content: center;
 }
 
 @keyframes slidefade {
@@ -357,19 +377,20 @@ width: 100%;
 /* Contact */
 
 section.contact {
-max-width: 700px;
-margin: 0 auto;
-text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section.contact .contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
 }
 
 section.contact img {
-max-width: 160px;
-margin: 0 auto;
-}
-
-section.contact .btn {
-width: 200px;
-margin: 0 auto;
+  max-width: 160px;
+  margin: 0 auto;
 }
 
 @media (max-width: 800px){
@@ -380,8 +401,9 @@ margin: 0 auto;
 
 /* Footer */
 footer {
-  position: relative;
   background: #442467;
+  display: flex;
+  justify-content: center;
 }
 
 footer .footer-wrapper {
