@@ -52,7 +52,7 @@ class App extends Component {
               <div className="about-wrapper flex-col-mobile">
                 <div className="about-text">
                   <p>
-                    I'm a passionate web developer and eCommerce systems analyst currently based in Dana Point, CA. My specialties are JavaScript (ES6), Node.js, Express, ReactJS, Redux, MongoDB, MySQL, HTML5, and CSS3. I enjoy learning more about technology and using my knowledge to solve real problems. I'm also a Grow with Google Scholar and a certified graduate of the Udacity Front End Web Developer Nanodegree program. Please contact me if you'd like to work together or just to chat.
+                    I'm a passionate problem solver, front-end engineer, and eCommerce systems analyst currently based in Dana Point, California. My specialties are JavaScript (ES6), Node.js, Express, ReactJS, Redux, MongoDB, MySQL, HTML5, and CSS3. I enjoy learning more about technology and using my knowledge to solve real world problems. I'm also a Grow with Google Scholar and a certified graduate of the Udacity Front End Web Developer Nanodegree program. Please contact me if you'd like to work together or just to chat.
                   </p>		
                 </div>
                 <div className="about-skills">
@@ -74,7 +74,7 @@ class App extends Component {
           </section>
           <section className="projects">
           <div className="container">
-            <h3 className="title">My Projects</h3>
+            <h3 className="title">My Work</h3>
               <div className="projects-wrapper flex-col-mobile">
                 <div className="project-card">
                   <h2>Maps App</h2>
@@ -101,7 +101,7 @@ class App extends Component {
           <div className="container">
             <div className="contact-wrapper">
               <img src={require('./img/mail-icon.png')} />		
-              <h3 className="title">Interested in working together?</h3>
+              <h3 className="title">Let's get in touch</h3>
               <p>Feel free to contact me if you'd like to work together, have any questions, or just want to chat.</p>
               <a className="btn">Contact Me</a>
             </div>
