@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import heroBg from './img/purple-hero-original.png';
-import heroImg from './img/hero-image-1.png'; 
-import './App.css';
+import heroImg from './img/hero-image-1.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          {/* <header>
-            <h2><a href="#">Rob Tucker</a></h2>
-            <nav>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </nav>
-          </header> */}
           <header>
             <div className="container">
               <div className="header-wrapper">
@@ -22,9 +14,9 @@ class App extends Component {
                   <h3>Rob Tucker</h3>
                 </div>
                 <nav>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Projects</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><AnchorLink href="#about">About</AnchorLink></li>
+                  <li><AnchorLink href="#projects">Projects</AnchorLink></li>
+                  <li><AnchorLink href="#contact">Contact</AnchorLink></li>
                 </nav>
               </div>
             </div>
@@ -38,7 +30,7 @@ class App extends Component {
                   <div className="hero-text">
                     <h1>Web Developer</h1>
                     <p>I'm Rob, a full stack web developer, eCommerce specialist, and JavaScript ninja.</p>
-                    <a href="#" className="btn">My Work</a>
+                    <AnchorLink href="#projects" className="btn">My Work</AnchorLink>
                   </div>
                   <div className="hero-image">
                     <img src={heroImg} />
@@ -46,7 +38,7 @@ class App extends Component {
               </div>
             </div>
           </section>
-          <section className="about">
+          <section className="about" id="about">
           <div className="container">
             <h3 className="title">About me</h3>
               <div className="about-wrapper flex-col-mobile">
@@ -72,7 +64,7 @@ class App extends Component {
               </div>
             </div>		
           </section>
-          <section className="projects">
+          <section className="projects" id="projects">
           <div className="container">
             <h3 className="title">My Work</h3>
               <div className="projects-wrapper flex-col-mobile">
@@ -97,7 +89,7 @@ class App extends Component {
               </div>
           </div>
           </section>
-          <section className="contact">
+          <section className="contact" id="contact">
           <div className="container">
             <div className="contact-wrapper">
               <img src={require('./img/mail-icon.png')} />		
