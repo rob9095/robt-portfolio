@@ -7,6 +7,7 @@
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
     "react": "^16.6.3",
+    "react-alice-carousel": "^1.13.0",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.6.3",
     "react-particles-js": "^2.4.2",

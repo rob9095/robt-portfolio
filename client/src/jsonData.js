@@ -1,0 +1,58 @@
+export const projects = [
+  { 
+    "url":"",
+    "name":"Richie House",
+    "icon": "maps-icon.png",
+    "skills":['JavaScript','HTML5','CSS3','PHP','MySQL'],
+    "position":1,
+  },
+  { 
+    "url":"",
+    "name":"Maps App",
+    "icon": "maps-icon.png",
+    "skills":['JavaScript','React','Babel','HTML5','CSS3','Fetch API','Webpack','Service Worker'],
+    "position":2,
+  },
+  { 
+    "url":"",
+    "name":"Memory Game",
+    "icon": "memory-game-icon-3.png",
+    "skills":['JavaScript', 'jQuery', 'HTML5', 'CSS Animations'],
+    "position":3,
+  },
+  { 
+    "url":"",
+    "name":"Frogger Clone",
+    "icon": "frogger-icon.png",
+    "skills": ['JavaScript', 'jQuery','HTML5 Canvas', 'CSS3'],
+    "position": 4,
+  },
+  { 
+    "url":"",
+    "name":"Bookshelf App",
+    "icon": "frogger-icon.png",
+    "skills": ['JavaScript','React','Babel','HTML5','Fetch API','CSS3','Webpack'],
+    "position": 5,
+  },
+  { 
+    "url":"",
+    "name":"Reviews App",
+    "icon": "frogger-icon.png",
+    "skills": ['JavaScript','HTML5','CSS3','Service Worker'],
+    "position": 6,
+  },
+  { 
+    "url":"",
+    "name":"Drawing App",
+    "icon": "frogger-icon.png",
+    "skills": ['JavaScript','HTML5','CSS3'],
+    "position": 7,
+  },
+  { 
+    "url":"",
+    "name":"Feed Reader Tests",
+    "icon": "frogger-icon.png",
+    "skills": ['Jasmine','JavaScript'],
+    "position": 8,
+  },
+]

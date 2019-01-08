@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import heroBg from './img/purple-hero-original.png';
 import heroImg from './img/hero-image-1.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Gallery from './ProjectSlider';
 
 class App extends Component {
   render() {
@@ -68,7 +69,7 @@ class App extends Component {
           <div className="container">
             <h3 className="title">My Work</h3>
               <div className="projects-wrapper flex-col-mobile">
-                <div className="project-card">
+             {/* <div className="project-card">
                   <h2>Maps App</h2>
                   <img src={require('./img/maps-icon.png')} />
                   <p>JavaScript, React, Babel, Webpack, Fetch API, CSS3, HTML5</p>
@@ -85,7 +86,8 @@ class App extends Component {
                     <img src={require('./img/frogger-icon.png')} />
                     <p>JavaScript, jQuery, HTML5 Canvas, CSS3</p>
                     <a className="btn">View Project</a>
-                </div>						
+                </div> */}
+                <Gallery />
               </div>
           </div>
           </section>

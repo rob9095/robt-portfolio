@@ -1,36 +1,52 @@
 import React, { Component } from 'react';
-import Slider from "react-slick";
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import { projects } from './jsonData';
 
-class ProjectSlider extends Component {
-  render() {
-    var settings = {
-      dots: true
-    };
+class Gallery extends React.Component {
+  responsive = {
+    0: { items: 1 },
+    700: { items: 2 },
+    1100: { items: 3 },
+  };
+  
+  onSlideChange(e) {
+    console.log('Item`s position during a change: ', e.item);
+    console.log('Slide`s position during a change: ', e.slide);
+  };
+ 
+  onSlideChanged(e) {
+    console.log('Item`s position after changes: ', e.item);
+    console.log('Slide`s position after changes: ', e.slide);
+  };
+  
+  galleryItems() {
     return (
-      <div>
-        <Slider {...settings}>
-                <div className="project-card">
-                  <h2>Maps App</h2>
-                  <img src={require('./img/maps-icon.png')} />
-                  <p>JavaScript, React, Babel, Webpack, Fetch API, CSS3, HTML5</p>
-                  <a className="btn">View Project</a>
-                </div>
-                <div className="project-card">
-                    <h2>Memory Game</h2>
-                    <img src={require('./img/memory-game-icon-3.png')} />
-                    <p>JavaScript,  jQuery, HTML5, CSS Animations</p>
-                    <a className="btn">View Project</a>
-                </div>
-                <div className="project-card">
-                    <h2>Frogger Clone</h2>
-                    <img src={require('./img/frogger-icon.png')} />
-                    <p>JavaScript, jQuery, HTML5 Canvas, CSS3</p>
-                    <a className="btn">View Project</a>
-                </div>
-        </Slider>
-      </div>
+      projects.sort((a,b)=>a.position - b.position).map(p => (
+        <div key={p.position} className="project-card">
+          <h2>{p.name}</h2>
+          <img src={require(`./img/${p.icon}`)} />
+          <p>{p.skills.map((s,i)=> i + 1 === p.skills.length ? s + "." : s + " , ")}</p>
+          <a className="btn">View Project</a>
+        </div>
+      ))
+    )
+  };
+  
+  render() {
+    const items = this.galleryItems();
+ 
+    return (
+      <AliceCarousel
+        items={items}
+        duration={400}
+        mouseDragEnabled={true}
+        responsive={this.responsive}
+        onSlideChange={this.onSlideChange}
+        onSlideChanged={this.onSlideChanged}
+      />
     );
   }
 }
 
-export default ProjectSlider;
+export default Gallery;
