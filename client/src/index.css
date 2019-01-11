@@ -109,7 +109,6 @@ header {
   z-index: 1;
   width: 100%;
   display: flex;
-  flex-direction: column;
   padding: 20px 80px;
   align-items: center;
 }
@@ -120,20 +119,47 @@ header .header-wrapper {
   align-items: center;  
 }
 
-.header-wrapper div, .header-wrapper nav {
+.header-wrapper div, nav.desktop-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
 }
 
-.header-wrapper nav {
+.header-wrapper nav.desktop-nav {
   margin-right: -15px;
 }
 
-header nav li {
+header nav.desktop-nav li {
   margin: 0 15px;
 }
+
+header nav.mobile-nav {
+  color: #fff;
+  font-size: 1.17em;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  header nav.desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  header nav.mobile-nav {
+    display: none;
+  }
+}
+
+/* Sidebar */
+
+
 
 /* Hero Styles */
 
@@ -180,9 +206,9 @@ header nav li {
 }
 
 .hero-content-area {
-  opacity: 0;
-  margin-top: 100px;
-  animation: 1s slidefade 1s forwards;
+  /* opacity: 0; */
+  /* margin-top: 100px; */
+  /* animation: 1s slidefade 1s forwards; */
   display: flex;
 }
 
@@ -268,43 +294,72 @@ section.projects {
 }
 
 .projects .title {
-  margin-bottom: 60px;
   text-align: center;
 }
 
-.projects-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.projects-wrapper .project-card {
+.project-card {
   background: #fff;
   color: #555;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 15px;
   width: 300px;
+  height: 380px;
   box-shadow: 0px 10px 40px 0 rgba(42, 43, 46, 0.4);
   padding: 30px;
-  margin: 0 auto;
+  margin: 20px;
 }
 
 .project-card img {
-width: 80px;
-margin: 20px 0px;
+  width: 80px;
+  margin: 20px 0px;
 }
 
 .project-card p {
-font-family: 'Montserrat', sans-serif;
-font-size: .788rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .788rem;
 }
 
 .project-card .btn {
-width: 100%;
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  .project-card {
+    width: 280px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.controls .dot {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.controls .dot.active {
+  opacity: .5;
+}
+
+.controls .dots {
+  display: flex;
 }
 
 /* Contact */
@@ -374,4 +429,10 @@ footer .social-icons {
 footer .social-icons i {
   margin-left: 15px;
   font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  footer {
+    padding: 20px;
+  }
 }
