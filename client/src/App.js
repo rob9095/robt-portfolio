@@ -2,32 +2,14 @@ import React, { Component } from 'react';
 import heroBg from './img/purple-hero-original.png';
 import heroImg from './img/hero-image-1.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Gallery from './ProjectSlider';
 import Slider from "./Slider";
+import Header from './Header';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <header>
-            <div className="container">
-              <div className="header-wrapper">
-                <div className="logo">
-                  <h3>Rob Tucker</h3>
-                </div>
-                <nav className="desktop-nav">
-                  <li><AnchorLink href="#about">About</AnchorLink></li>
-                  <li><AnchorLink href="#projects">Projects</AnchorLink></li>
-                  <li><AnchorLink href="#contact">Contact</AnchorLink></li>
-                </nav>
-                <nav className="mobile-nav">
-                  {/* <span />
-                  <span /> */}
-                  <i className="fa fa-bars"></i>	
-                </nav>
-              </div>
-            </div>
-          </header>         
+         <Header />
           <section className="hero">
             <div className="background-image" style={{
               backgroundImage: `url(${heroBg})`,

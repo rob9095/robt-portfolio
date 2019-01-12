@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import posed from "react-pose";
-import "./styles.css";
+import posed, { PoseGroup } from "react-pose";
 
 const Sider = posed.ul({
   open: {
@@ -11,31 +10,49 @@ const Sider = posed.ul({
   closed: { x: "-100%", delay: 300 }
 });
 
-const Item = posed.li({
+const MenuItem = posed.li({
   open: { y: 0, opacity: 1 },
   closed: { y: 20, opacity: 0 }
+});
+
+
+const Shade = posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 }
 });
 
 class Sidebar extends Component {
   state = { isOpen: false };
 
-  componentDidMount() {}
+  componentWillReceiveProps(newProps) {
+    if (newProps.showSidebar !== this.state.isOpen) {
+      this.toggle();
+    }
+  }
 
-  toggle = () => this.setState({ isOpen: !this.state.isOpen });
+  toggle = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
+
+  handleClose = () => {
+    this.toggle()
+    this.props.onToggle();
+  }
 
   render() {
     const { isOpen } = this.state;
 
-    return <div>
-        <Sider className="sidebar" pose={isOpen ? "open" : "closed"}>
-          <Item className="item" />
-          <Item className="item" />
-          <Item className="item" />
-          <Item className="item" />
-          <button onClick={this.toggle}>click me</button>
+    return <PoseGroup>
+        {isOpen && <Shade key="shade" className="shade" onClick={this.handleClose} />}
+        <Sider key="sider" className="sidebar" pose={isOpen ? "open" : "closed"}>
+          <MenuItem className="menu-item close" onClick={this.handleClose}>
+            <i class="fa fa-close" />
+          </MenuItem>
+          <MenuItem className="menu-item">About</MenuItem>
+          <MenuItem className="menu-item">Projects</MenuItem>
+          <MenuItem className="menu-item">Contact</MenuItem>
         </Sider>
-        <button onClick={this.toggle}>click me</button>
-      </div>;
+      </PoseGroup>;
   }
 }
 

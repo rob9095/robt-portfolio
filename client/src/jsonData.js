@@ -17,7 +17,7 @@ export const projects = [
     "url":"",
     "name":"Memory Game",
     "icon": "memory-game-icon-3.png",
-    "skills":['JavaScript', 'jQuery', 'HTML5', 'CSS Animations'],
+    "skills":['JavaScript', 'HTML5', 'CSS Animations'],
     "position":3,
   },
   { 
@@ -45,7 +45,7 @@ export const projects = [
     "url":"",
     "name":"Drawing App",
     "icon": "frogger-icon.png",
-    "skills": ['JavaScript','HTML5','CSS3'],
+    "skills": ['JavaScript', 'jQuery','HTML5','CSS3'],
     "position": 7,
   },
   { 

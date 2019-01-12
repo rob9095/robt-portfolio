@@ -137,6 +137,7 @@ header nav.desktop-nav li {
 header nav.mobile-nav {
   color: #fff;
   font-size: 1.17em;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -159,7 +160,50 @@ header nav.mobile-nav {
 
 /* Sidebar */
 
+.shade {
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(45deg, #724092,#422e7e);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-image: url("./img/purple-projects-bg.png");
+}
+
+.menu-item {
+  border-radius: 5px;
+  height: 40px;
+  width: 100%;
+  opacity: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-item.close {
+  height: 20px;
+  text-align: right;
+  margin-top: -10px;
+}
 
 /* Hero Styles */
 
