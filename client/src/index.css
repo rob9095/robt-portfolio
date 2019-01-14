@@ -111,6 +111,7 @@ header {
   display: flex;
   padding: 20px 80px;
   align-items: center;
+  justify-content: center;
 }
 
 header .header-wrapper {

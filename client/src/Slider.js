@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
+import Swipeable from "react-swipeable";
 import { projects } from "./jsonData";
 
 const Slide = posed.div({
@@ -11,11 +12,8 @@ const Slide = posed.div({
     }
   },
   exit: {
-    x: 300,
+    x: 80,
     opacity: 0,
-    // transition: {
-    //   x: { type: "spring", stiffness: 100, damping: 15 }
-    // }
   }
 });
 
@@ -36,12 +34,39 @@ class Slider extends Component {
     });
   };
 
+  handleSwipeRight = () => {
+    if (this.state.firstIndex !== 0) {
+      this.setState({
+        firstIndex: this.state.firstIndex - this.state.itemsVisible
+      });
+    }
+  };
+
+  handleSwipeLeft = () => {
+    console.log("left swipe");
+    if (
+      this.state.firstIndex !==
+      this.state.items.length - this.state.itemsVisible
+    ) {
+      this.setState({
+        firstIndex: this.state.firstIndex + this.state.itemsVisible
+      });
+    }
+  };
+
   handleWindowResize = () => {
     let clientWidth = document.documentElement.clientWidth;
+    let itemsVisible = clientWidth <= 500 ? 1 : clientWidth >= 800 ? 3 : 2;
+    if ((this.state.firstIndex / itemsVisible) % 1 != 0) {
+      console.log("update first index");
+      this.setState({
+        firstIndex: this.state.firstIndex - 1
+      });
+    }
     this.setState({
-      itemsVisible: clientWidth <= 700 ? 1 : clientWidth >= 1300 ? 3 : 2,
-    })
-  }
+      itemsVisible
+    });
+  };
 
   render() {
     const { items, firstIndex, itemsVisible, activeDot } = this.state;
@@ -51,7 +76,11 @@ class Slider extends Component {
     }
     return (
       <div>
-        <div className="gallery">
+        <Swipeable
+          className="gallery"
+          onSwipedRight={this.handleSwipeRight}
+          onSwipedLeft={this.handleSwipeLeft}
+        >
           <PoseGroup>
             {items.slice(firstIndex, firstIndex + itemsVisible).map(p => (
               <Slide key={p.position}>
@@ -64,7 +93,7 @@ class Slider extends Component {
               </Slide>
             ))}
           </PoseGroup>
-        </div>
+        </Swipeable>
         <div className="controls">
           <div className="dots">
             {dots.map((d, i) => (

@@ -46,7 +46,7 @@ class Sidebar extends Component {
         {isOpen && <Shade key="shade" className="shade" onClick={this.handleClose} />}
         <Sider key="sider" className="sidebar" pose={isOpen ? "open" : "closed"}>
           <MenuItem className="menu-item close" onClick={this.handleClose}>
-            <i class="fa fa-close" />
+            <i className="fa fa-close" />
           </MenuItem>
           <MenuItem className="menu-item">About</MenuItem>
           <MenuItem className="menu-item">Projects</MenuItem>
