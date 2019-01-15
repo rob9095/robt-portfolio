@@ -44,10 +44,7 @@ class Slider extends Component {
 
   handleSwipeLeft = () => {
     console.log("left swipe");
-    if (
-      this.state.firstIndex !==
-      this.state.items.length - this.state.itemsVisible
-    ) {
+    if (this.state.firstIndex + this.state.itemsVisible < this.state.items.length) {
       this.setState({
         firstIndex: this.state.firstIndex + this.state.itemsVisible
       });
@@ -56,7 +53,7 @@ class Slider extends Component {
 
   handleWindowResize = () => {
     let clientWidth = document.documentElement.clientWidth;
-    let itemsVisible = clientWidth <= 500 ? 1 : clientWidth >= 800 ? 3 : 2;
+    let itemsVisible = clientWidth <= 700 ? 1 : clientWidth >= 1150 ? 3 : 2;
     if ((this.state.firstIndex / itemsVisible) % 1 != 0) {
       console.log("update first index");
       this.setState({

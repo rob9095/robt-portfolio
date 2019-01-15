@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Sider = posed.ul({
   open: {
@@ -43,14 +44,26 @@ class Sidebar extends Component {
     const { isOpen } = this.state;
 
     return <PoseGroup>
-        {isOpen && <Shade key="shade" className="shade" onClick={this.handleClose} />}
+        {isOpen && <Shade key="shade" className="shade" />}
         <Sider key="sider" className="sidebar" pose={isOpen ? "open" : "closed"}>
           <MenuItem className="menu-item close" onClick={this.handleClose}>
             <i className="fa fa-close" />
           </MenuItem>
-          <MenuItem className="menu-item">About</MenuItem>
-          <MenuItem className="menu-item">Projects</MenuItem>
-          <MenuItem className="menu-item">Contact</MenuItem>
+          <MenuItem className="menu-item">
+            <AnchorLink onClick={this.handleClose} href="#about">
+              About
+            </AnchorLink>
+          </MenuItem>
+          <MenuItem className="menu-item">
+            <AnchorLink onClick={this.handleClose} href="#projects">
+              Projects
+            </AnchorLink>
+          </MenuItem>
+          <MenuItem className="menu-item">
+            <AnchorLink onClick={this.handleClose} href="#contact">
+              Contact
+            </AnchorLink>
+          </MenuItem>
         </Sider>
       </PoseGroup>;
   }
