@@ -17,7 +17,7 @@ export default class Footer extends Component {
             <div className="footer-wrapper">
               <div className="logo">
                 <h3>Rob Tucker</h3>
-                <p onClick={this.toggleCreditModal}>Creative Commons</p>
+                <button className="btn-link" onClick={this.toggleCreditModal}>Creative Commons</button>
               </div>
               <div className="social-icons">
                 <a href="https://github.com/rob9095"><i className="fa fa-github" /></a>

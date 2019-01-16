@@ -37,23 +37,37 @@ class CreditModal extends Component {
   };
 
   handleClose = () => {
-    this.toggle()
+    this.toggle();
     this.props.onToggle();
   }
 
   render() {
     const { isOpen } = this.state;
 
-    return (
-     <div className="modal-container">
-        <PoseGroup>
-          {isOpen && [
-            <Shade onClick={this.handleClose} key="shade" className="shade" />,
-            <Modal key="modal" className="modal" />
+    return <PoseGroup>
+        {isOpen && [
+          <Shade key="shade" className="shade modal-wrapper">
+            <Modal key="modal" className="modal">
+              <i onClick={this.handleClose} className="fa fa-close" />
+              <div className="modal-content">
+                <h2>Icon & Image Credit</h2>
+                <ul>
+                  <li>
+                    <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
+                      Hero Image Designed by Pikisuperstar
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
+                      Maps Icon Designed by FlatIcon
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </Modal>
+          </Shade>
           ]}
-        </PoseGroup>
-     </div>
-    );
+      </PoseGroup>;
   }
 }
 
