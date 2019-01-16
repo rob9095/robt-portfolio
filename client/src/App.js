@@ -25,7 +25,7 @@ class App extends Component {
                 </AnchorLink>
               </div>
               <div className="hero-image">
-                <img src={heroImg} />
+                <img src={heroImg} alt="" />
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ class App extends Component {
         <section className="contact" id="contact">
           <div className="container">
             <div className="contact-wrapper">
-              <img src={require("./img/mail-icon.png")} />
+              <img src={require("./img/mail-icon.png")} alt="email icon" />
               <h3 className="title">Let's get in touch</h3>
               <p>
                 Feel free to contact me if you'd like to work together, have

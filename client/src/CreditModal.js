@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
+import FocusTrap from 'react-focus-trap';
 
 const Modal = posed.div({
   enter: {
@@ -46,27 +47,29 @@ class CreditModal extends Component {
 
     return <PoseGroup>
         {isOpen && [
-          <Shade key="shade" className="shade modal-wrapper">
-            <Modal key="modal" className="modal">
-              <i onClick={this.handleClose} className="fa fa-close" />
-              <div className="modal-content">
-                <h2>Icon & Image Credit</h2>
-                <ul>
-                  <li>
-                    <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
-                      Hero Image Designed by Pikisuperstar
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
-                      Maps Icon Designed by FlatIcon
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          <Shade key="shade" className="shade">
+            <Modal aria-modal="true" role="dialog" aria-labelledby="Credit Modal" aria-describedby="Credit & Attribution for Images and Icons" key="modal" className="modal">
+              <FocusTrap onExit={this.handleClose} active={this.state.isOpen}>
+                <i tabIndex="0" type="button" aria-label="Close Modal" onClick={this.handleClose} className="fa fa-close" />
+                <div className="modal-content">
+                  <h2>Icon & Image Credit</h2>
+                  <ul>
+                    <li>
+                      <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
+                        Hero Image Designed by Pikisuperstar
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
+                        Maps Icon Designed by FlatIcon
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </FocusTrap>
             </Modal>
           </Shade>
-          ]}
+        ]}
       </PoseGroup>;
   }
 }

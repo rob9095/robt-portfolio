@@ -54,7 +54,7 @@ class Slider extends Component {
   handleWindowResize = () => {
     let clientWidth = document.documentElement.clientWidth;
     let itemsVisible = clientWidth <= 700 ? 1 : clientWidth >= 1150 ? 3 : 2;
-    if ((this.state.firstIndex / itemsVisible) % 1 != 0) {
+    if ((this.state.firstIndex / itemsVisible) % 1 !== 0) {
       console.log("update first index");
       this.setState({
         firstIndex: this.state.firstIndex - 1
@@ -66,7 +66,7 @@ class Slider extends Component {
   };
 
   render() {
-    const { items, firstIndex, itemsVisible, activeDot } = this.state;
+    const { items, firstIndex, itemsVisible } = this.state;
     let dots = items.slice(0, Math.ceil(items.length / itemsVisible));
     window.onresize = () => {
       this.handleWindowResize();
@@ -83,9 +83,9 @@ class Slider extends Component {
               <Slide key={p.position}>
                 <div className="project-card">
                   <h2>{p.name}</h2>
-                  <img src={require(`./img/${p.icon}`)} />
+                  <img alt={p.name + " icon"} src={require(`./img/${p.icon}`)} />
                   <p>{p.skills.map((s, i) => i + 1 === p.skills.length ? s + "." : s + " , ")}</p>
-                  <a className="btn">View Project</a>
+                  <a href={p.url} className="btn">View Project</a>
                 </div>
               </Slide>
             ))}
