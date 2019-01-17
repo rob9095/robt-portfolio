@@ -94,11 +94,14 @@ class Slider extends Component {
         <div className="controls">
           <div className="dots">
             {dots.map((d, i) => (
-              <div
+              <button
+                title={`Slide ${i+1}`}
                 onClick={() => this.handleDotClick(i)}
                 className={firstIndex === i * itemsVisible ? "dot active" : "dot"}
                 key={i}
-              />
+              >
+
+              </button>
             ))}
           </div>
         </div>

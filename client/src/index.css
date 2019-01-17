@@ -53,6 +53,11 @@ a.btn:hover {
   background: linear-gradient(145deg, #6ddf97,#01b8ab);
 }
 
+.btn-link {
+  background: transparent;
+  border: none;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -135,7 +140,7 @@ header nav.desktop-nav li {
   margin: 0 15px;
 }
 
-header nav.mobile-nav {
+header nav.mobile-nav button {
   color: #fff;
   font-size: 1.17em;
   cursor: pointer;
@@ -157,6 +162,9 @@ header nav.mobile-nav {
   header nav.mobile-nav {
     display: none;
   }
+  .sidebar-wrapper {
+    display: none;
+  }
 }
 
 /* Sidebar */
@@ -169,6 +177,7 @@ header nav.mobile-nav {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 2;
 }
 
 .sidebar {
@@ -183,7 +192,7 @@ header nav.mobile-nav {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   background-size: cover;
   background-image: url("./img/purple-projects-bg.png");
 }
@@ -396,7 +405,12 @@ section.projects {
   background: #fff;
   border-radius: 50%;
   margin: 5px;
+  border: none;
   cursor: pointer;
+}
+
+.controls .dot:focus {
+  outline: none;
 }
 
 .controls .dot.active {
@@ -529,4 +543,8 @@ footer .social-icons i:hover {
 
 .modal-content ul {
   margin-top: 15px;
+}
+
+.focus-trap:focus {
+  outline: none;
 }

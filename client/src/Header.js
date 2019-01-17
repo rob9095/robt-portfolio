@@ -13,28 +13,33 @@ export default class Header extends Component {
   }
 
   render() {
-    return(
-      <header>
+    return <header>
         <div className="container">
           <div className="header-wrapper">
             <div className="logo">
               <h3>Rob Tucker</h3>
             </div>
-            <nav className="desktop-nav">
-              <li><AnchorLink href="#about">About</AnchorLink></li>
-              <li><AnchorLink href="#projects">Projects</AnchorLink></li>
-              <li><AnchorLink href="#contact">Contact</AnchorLink></li>
+            <nav name="Desktop Navigation" className="desktop-nav">
+              <li>
+                <AnchorLink href="#about">About</AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#projects">Projects</AnchorLink>
+              </li>
+              <li>
+                <AnchorLink href="#contact">Contact</AnchorLink>
+              </li>
             </nav>
-            <nav className="mobile-nav">
-              <i onClick={this.toggleSidebar} className="fa fa-bars"></i>
+            <nav name="Mobile Navigation" className="mobile-nav">
+              <button className="btn-link" title="Open Navigation">
+                <i onClick={this.toggleSidebar} className="fa fa-bars" />
+              </button>
             </nav>
           </div>
         </div>
-        <Sidebar
-          showSidebar={this.state.showSidebar}
-          onToggle={this.toggleSidebar}
-        />
-      </header>
-    )
+        <div className="sidebar-wrapper">
+          <Sidebar showSidebar={this.state.showSidebar} onToggle={this.toggleSidebar} />
+        </div>
+      </header>;
   }
 } 
