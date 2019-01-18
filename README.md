@@ -1,2 +1,2 @@
-# flex-box-landing-page
-basic flex box landing page
+# Personal Website
+Personal website and portfolio

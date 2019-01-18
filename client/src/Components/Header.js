@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'; 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Sidebar from './Sidebar';
 
@@ -17,17 +18,17 @@ export default class Header extends Component {
         <div className="container">
           <div className="header-wrapper">
             <div className="logo">
-              <h3>Rob Tucker</h3>
+            <Link to="/"><h3>Rob Tucker</h3></Link>
             </div>
             <nav name="Desktop Navigation" className="desktop-nav">
               <li>
-                <AnchorLink href="#about">About</AnchorLink>
+                {this.props.useAnchorLinks ? <AnchorLink href="#about">About</AnchorLink> : <Link to="/#about">About</Link> }
               </li>
               <li>
-                <AnchorLink href="#projects">Projects</AnchorLink>
+                {this.props.useAnchorLinks ? <AnchorLink href="#projects">Projects</AnchorLink> : <Link to="/#projects">Projects</Link>}
               </li>
               <li>
-                <AnchorLink href="#contact">Contact</AnchorLink>
+                {this.props.useAnchorLinks ? <AnchorLink href="#contact">Contact</AnchorLink> : <Link to="/#contact">Contact</Link>}
               </li>
             </nav>
             <nav name="Mobile Navigation" className="mobile-nav">
@@ -38,7 +39,7 @@ export default class Header extends Component {
           </div>
         </div>
         <div className="sidebar-wrapper">
-          <Sidebar showSidebar={this.state.showSidebar} onToggle={this.toggleSidebar} />
+          <Sidebar useAnchorLinks={this.props.useAnchorLinks} showSidebar={this.state.showSidebar} onToggle={this.toggleSidebar} />
         </div>
       </header>;
   }

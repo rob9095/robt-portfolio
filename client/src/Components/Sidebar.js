@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"; 
 import posed, { PoseGroup } from "react-pose";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -48,20 +49,14 @@ class Sidebar extends Component {
           <MenuItem title="Close Navigation" className="menu-item close" onClick={this.handleClose}>
             <i className="fa fa-close" />
           </MenuItem>
-          <MenuItem className="menu-item">
-            <AnchorLink onClick={this.handleClose} href="#about">
-              About
-            </AnchorLink>
+          <MenuItem className="menu-item" onClick={this.handleClose}>
+            {this.props.useAnchorLinks ? <AnchorLink href="#about">About</AnchorLink> : <Link to="/#about">About</Link>}
           </MenuItem>
-          <MenuItem className="menu-item">
-            <AnchorLink onClick={this.handleClose} href="#projects">
-              Projects
-            </AnchorLink>
+          <MenuItem className="menu-item" onClick={this.handleClose}>
+            {this.props.useAnchorLinks ? <AnchorLink href="#projects">Projects</AnchorLink> : <Link to="/#projects">Projects</Link>}
           </MenuItem>
-          <MenuItem className="menu-item">
-            <AnchorLink onClick={this.handleClose} href="#contact">
-              Contact
-            </AnchorLink>
+          <MenuItem className="menu-item" onClick={this.handleClose}>
+            {this.props.useAnchorLinks ? <AnchorLink href="#contact">Contact</AnchorLink> : <Link to="/#contact">Contact</Link>}
           </MenuItem>
         </Sider>
       </PoseGroup>;
