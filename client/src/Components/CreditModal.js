@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
 import FocusTrap from 'react-focus-trap';
-import { credits } from "./jsonData";
+import { credits } from "../data/jsonData";
 
 const Modal = posed.div({
   enter: {
@@ -47,27 +47,28 @@ class CreditModal extends Component {
     const { isOpen } = this.state;
 
     return <PoseGroup>
-        {isOpen && [
-          <Shade key="shade" className="shade">
-            <Modal aria-modal="true" role="dialog" aria-labelledby="Credit Modal" aria-describedby="Credit & Attribution for Images and Icons" key="modal" className="modal">
+        {isOpen && [<Shade key="shade" className="shade">
+          <Modal
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="Credit Modal"
+            aria-describedby="Credit & Attribution for Images and Icons" 
+            key="modal" className="modal"
+            style={{ top: document.documentElement.clientHeight * .25}}
+          >
               <FocusTrap onExit={this.handleClose} active={this.state.isOpen}>
                 <i tabIndex="0" type="button" aria-label="Close Modal" onClick={this.handleClose} className="fa fa-close" />
                 <div className="modal-content">
                   <h2>Icon & Image Credit</h2>
                   <ul className="credit-list">
-                    {credits.map(c=>
-                      <li key={c.id}>
-                        <a href={c.url}>
-                          {c.text}
-                        </a>
-                      </li>
-                    )}
+                    {credits.map(c => <li key={c.id}>
+                        <a href={c.url}>{c.text}</a>
+                      </li>)}
                   </ul>
                 </div>
               </FocusTrap>
             </Modal>
-          </Shade>
-        ]}
+          </Shade>]}
       </PoseGroup>;
   }
 }

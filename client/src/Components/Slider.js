@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
 import Swipeable from "react-swipeable";
-import { projects } from "./jsonData";
+import { projects } from "../data/jsonData";
 
 const Slide = posed.div({
   enter: {
@@ -86,7 +86,7 @@ class Slider extends Component {
                     <h2>{p.name}</h2>
                     <hr />
                   </div>
-                  <img alt={p.name + " icon"} src={require(`./img/${p.icon}`)} />
+                  <img alt={p.name + " icon"} src={require(`../img/${p.icon}`)} />
                   <p>{p.skills.map((s, i) => i + 1 === p.skills.length ? s + "." : s + ", ")}</p>
                   <a title={p.name} href={p.url} className="btn">View Project</a>
                 </div>

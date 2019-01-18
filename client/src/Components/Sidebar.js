@@ -5,17 +5,16 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Sider = posed.ul({
   open: {
     x: "0%",
-    delayChildren: 200,
+    delayChildren: 100,
     staggerChildren: 50
   },
   closed: { x: "-100%", delay: 300 }
 });
 
 const MenuItem = posed.li({
-  open: { y: 0, opacity: 1 },
-  closed: { y: 20, opacity: 0 }
+  open: { x: 0, opacity: 1 },
+  closed: { x: -20, opacity: 0 }
 });
-
 
 const Shade = posed.div({
   enter: { opacity: 1 },

@@ -512,10 +512,8 @@ footer .social-icons i:hover {
 .modal {
   position: relative;
   margin: 0 auto;
-  top: 100px;
   background: #fff;
   max-width: 300px;
-  height: 400px;
   border-radius: 10px;
 }
 
