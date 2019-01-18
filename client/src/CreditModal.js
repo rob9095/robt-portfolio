@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import posed, { PoseGroup } from "react-pose";
 import FocusTrap from 'react-focus-trap';
+import { credits } from "./jsonData";
 
 const Modal = posed.div({
   enter: {
@@ -53,17 +54,14 @@ class CreditModal extends Component {
                 <i tabIndex="0" type="button" aria-label="Close Modal" onClick={this.handleClose} className="fa fa-close" />
                 <div className="modal-content">
                   <h2>Icon & Image Credit</h2>
-                  <ul>
-                    <li>
-                      <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
-                        Hero Image Designed by Pikisuperstar
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.freepik.com/free-vector/moderm-landing-page-template_3006732.htm">
-                        Maps Icon Designed by FlatIcon
-                      </a>
-                    </li>
+                  <ul className="credit-list">
+                    {credits.map(c=>
+                      <li key={c.id}>
+                        <a href={c.url}>
+                          {c.text}
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </FocusTrap>

@@ -82,10 +82,13 @@ class Slider extends Component {
             {items.slice(firstIndex, firstIndex + itemsVisible).map(p => (
               <Slide key={p.position}>
                 <div className="project-card">
-                  <h2>{p.name}</h2>
+                  <div className="title">
+                    <h2>{p.name}</h2>
+                    <hr />
+                  </div>
                   <img alt={p.name + " icon"} src={require(`./img/${p.icon}`)} />
-                  <p>{p.skills.map((s, i) => i + 1 === p.skills.length ? s + "." : s + " , ")}</p>
-                  <a href={p.url} className="btn">View Project</a>
+                  <p>{p.skills.map((s, i) => i + 1 === p.skills.length ? s + "." : s + ", ")}</p>
+                  <a title={p.name} href={p.url} className="btn">View Project</a>
                 </div>
               </Slide>
             ))}
