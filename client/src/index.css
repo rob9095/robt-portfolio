@@ -183,7 +183,7 @@ header nav.mobile-nav button {
 .sidebar {
   width: 300px;
   height: 100vh;
-  padding: 30px;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -206,13 +206,19 @@ header nav.mobile-nav button {
   color: #fff;
   font-size: 16px;
   text-align: center;
-  cursor: pointer;
 }
 
-.menu-item.close {
-  height: 20px;
-  text-align: right;
-  margin-top: -10px;
+.sidebar .fa-close {
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  top: 5px;
+  color: #fff;
+}
+
+.sidebar .fa-close:hover {
+  opacity: .8;
 }
 
 /* Hero Styles */

@@ -8,10 +8,15 @@ const Sider = posed.ul({
     delayChildren: 100,
     staggerChildren: 50
   },
-  closed: { x: "-100%", delay: 300 }
+  closed: { x: "-100%", delay: 400 }
 });
 
 const MenuItem = posed.li({
+  open: { x: 0, opacity: 1 },
+  closed: { x: -20, opacity: 0 }
+});
+
+const CloseBtn = posed.i({
   open: { x: 0, opacity: 1 },
   closed: { x: -20, opacity: 0 }
 });
@@ -22,41 +27,39 @@ const Shade = posed.div({
 });
 
 class Sidebar extends Component {
-  state = { isOpen: false };
-
-  componentWillReceiveProps(newProps) {
-    if (newProps.showSidebar !== this.state.isOpen) { 
-      this.toggle();
-    }
-  }
-
-  toggle = () => {
-    this.setState({ isOpen: !this.state.isOpen });
+  state = {
+    isOpen: false,
+    menuItems: ['About','Projects','Contact'],
   };
 
+  componentDidMount() {
+    this.setState({ isOpen: true })
+  }
+
   handleClose = () => {
-    this.toggle()
-    this.props.onToggle();
+    this.setState({isOpen: false})
+    // wait for close animation
+    setTimeout(()=>{
+      this.props.onToggle();
+    },300)
   }
 
   render() {
     const { isOpen } = this.state;
 
     return <PoseGroup>
-        {isOpen && <Shade key="shade" className="shade" />}
+        {isOpen && <Shade key="shade" className="shade" onClick={this.handleClose} />}
         <Sider key="sider" className="sidebar" pose={isOpen ? "open" : "closed"}>
-          <MenuItem title="Close Navigation" className="menu-item close" onClick={this.handleClose}>
-            <i className="fa fa-close" />
-          </MenuItem>
-          <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#about">About</AnchorLink> : <a href="/#about">About</a>}
-          </MenuItem>
-          <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#projects">Projects</AnchorLink> : <a href="/#projects">Projects</a>}
-          </MenuItem>
-          <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#contact">Contact</AnchorLink> : <a href="/#contact">Contact</a>}
-          </MenuItem>
+          <CloseBtn tabIndex="0" title="Close Navigation" onClick={this.handleClose} className="fa fa-close" />
+          {this.state.menuItems.map(item=>(
+            <MenuItem className="menu-item" key={item}>
+              {this.props.useAnchorLinks ?
+                <AnchorLink onClick={this.handleClose} href={'#' + item.toLowerCase()}>{item}</AnchorLink>
+                :
+                <a onClick={this.handleClose} href={'/#'+item.toLowerCase()}>{item}</a>
+              }
+            </MenuItem>            
+          ))}
         </Sider>
       </PoseGroup>;
   }

@@ -39,7 +39,13 @@ export default class Header extends Component {
           </div>
         </div>
         <div className="sidebar-wrapper">
-          <Sidebar useAnchorLinks={this.props.useAnchorLinks} showSidebar={this.state.showSidebar} onToggle={this.toggleSidebar} />
+          {this.state.showSidebar && (
+            <Sidebar 
+              useAnchorLinks={this.props.useAnchorLinks} 
+              showSidebar={this.state.showSidebar} 
+              onToggle={this.toggleSidebar}
+            />
+          )}
         </div>
       </header>;
   }
