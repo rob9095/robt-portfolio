@@ -24,7 +24,7 @@ export default class Header extends Component {
               {this.state.menuItems.map(item=>(
                 <li key={item}>
                   {this.props.useAnchorLinks ?
-                    <AnchorLink href="#about">About</AnchorLink>
+                    <AnchorLink href="#about">{item}</AnchorLink>
                     :
                     <a href={"/#"+item.toLowerCase()}>{item}</a> }
                 </li>

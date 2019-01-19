@@ -12,12 +12,11 @@ function HeroSection() {
           <div className="hero-text">
             <h1>Web Developer</h1>
             <p>
-              I'm Rob, a full stack web developer, eCommerce specialist,
-              and JavaScript ninja.
-                </p>
+              I'm Rob, a full stack web developer, software engineer, and eCommerce specialist.
+            </p>
             <AnchorLink href="#projects" className="btn">
               My Work
-                </AnchorLink>
+            </AnchorLink>
           </div>
           <div className="hero-image">
             <img src={heroImg} alt="" />
