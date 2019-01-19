@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom"; 
 import posed, { PoseGroup } from "react-pose";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -26,7 +25,7 @@ class Sidebar extends Component {
   state = { isOpen: false };
 
   componentWillReceiveProps(newProps) {
-    if (newProps.showSidebar !== this.state.isOpen) {
+    if (newProps.showSidebar !== this.state.isOpen) { 
       this.toggle();
     }
   }
@@ -50,13 +49,13 @@ class Sidebar extends Component {
             <i className="fa fa-close" />
           </MenuItem>
           <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#about">About</AnchorLink> : <Link to="/#about">About</Link>}
+            {this.props.useAnchorLinks ? <AnchorLink href="#about">About</AnchorLink> : <a href="/#about">About</a>}
           </MenuItem>
           <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#projects">Projects</AnchorLink> : <Link to="/#projects">Projects</Link>}
+            {this.props.useAnchorLinks ? <AnchorLink href="#projects">Projects</AnchorLink> : <a href="/#projects">Projects</a>}
           </MenuItem>
           <MenuItem className="menu-item" onClick={this.handleClose}>
-            {this.props.useAnchorLinks ? <AnchorLink href="#contact">Contact</AnchorLink> : <Link to="/#contact">Contact</Link>}
+            {this.props.useAnchorLinks ? <AnchorLink href="#contact">Contact</AnchorLink> : <a href="/#contact">Contact</a>}
           </MenuItem>
         </Sider>
       </PoseGroup>;

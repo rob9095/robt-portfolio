@@ -18,7 +18,7 @@ export default class Header extends Component {
         <div className="container">
           <div className="header-wrapper">
             <div className="logo">
-            <Link to="/"><h3>Rob Tucker</h3></Link>
+              <a href="/"><h3>Rob Tucker</h3></a>
             </div>
             <nav name="Desktop Navigation" className="desktop-nav">
               <li>
