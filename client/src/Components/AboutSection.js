@@ -13,9 +13,8 @@ function AboutSection() {
               California. My specialties are JavaScript (ES6), Node.js,
               Express, ReactJS, Redux, MongoDB, MySQL, HTML5, and CSS3.
               I enjoy learning more about technology and using my
-              knowledge to solve real world problems. I'm also a Grow
-              with Google Scholar and a certified graduate of the
-              Udacity Front End Web Developer Nanodegree program. Please
+              knowledge to solve real world problems. I'm also a <a className="purple" href="https://grow.google/programs/udacity/">Grow
+              with Google Scholar</a> and a certified graduate of the <a className="purple" href="https://confirm.udacity.com/FGDNZCAG">Udacity Front End Web Developer Nanodegree</a> program. Please
               contact me if you'd like to work together or just to chat.
                 </p>
           </div>
