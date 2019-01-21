@@ -14,32 +14,39 @@ export const projects = [
     "position":2,
   },
   { 
+    "url":"https://github.com/rob9095/fend-maps-app",
+    "name":"Todo App",
+    "icon": "todo-icon.png",
+    "skills":['JavaScript','Node.js','Express','MongoDB','jQuery'],
+    "position":3,
+  },  
+  { 
     "url":"https://github.com/rob9095/memory-card-game",
     "name":"Memory Game",
     "icon": "memory-game-icon-3.png",
     "skills":['JavaScript', 'HTML5', 'CSS3 Animations'],
-    "position":3,
+    "position":4,
   },
   { 
     "url":"https://github.com/rob9095/arcade-game",
     "name":"Frogger Clone",
     "icon": "frogger-icon.png",
     "skills": ['JavaScript', 'jQuery','HTML5 Canvas', 'CSS3'],
-    "position": 4,
+    "position": 5,
   },
   { 
     "url":"https://github.com/rob9095/fend-my-reads-app",
     "name":"Bookshelf App",
     "icon": "bookshelf-icon.png",
     "skills": ['JavaScript','React','Babel','HTML5','Fetch API','CSS3','Webpack'],
-    "position": 5,
+    "position": 6,
   },
   { 
     "url":"https://github.com/rob9095/fend-restaurant-app",
     "name":"Reviews App",
     "icon": "reviews-icon.png",
     "skills": ['JavaScript','HTML5','CSS3','Service Worker'],
-    "position": 6,
+    "position": 7,
   },
   { 
     "url":"https://github.com/rob9095/pixel-drawing-js",
@@ -53,7 +60,7 @@ export const projects = [
     "name":"Feed Reader Tests",
     "icon": "jasmine-icon.png",
     "skills": ['Jasmine','JavaScript'],
-    "position": 8,
+    "position": 9,
   },
 ]
 
@@ -95,6 +102,11 @@ export const credits = [
   },
   {
     id: 7,
+    url: "https://www.freepik.com/",
+    text: "Todo Icon made by Freepik",
+  },
+  {
+    id: 8,
     url: "https://www.freepik.com/",
     text: "Email Icon made by Freepik",
   },
