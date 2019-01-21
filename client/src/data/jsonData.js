@@ -53,7 +53,7 @@ export const projects = [
     "name":"Drawing App",
     "icon": "draw-icon.png",
     "skills": ['JavaScript', 'jQuery','HTML5','CSS3'],
-    "position": 7,
+    "position": 8,
   },
   { 
     "url":"https://github.com/rob9095/fend-jasmine-tests",
