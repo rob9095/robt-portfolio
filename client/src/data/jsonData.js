@@ -115,6 +115,11 @@ export const credits = [
   {
     id: 8,
     url: "https://www.freepik.com/",
+    text: "Message Icon made by Freepik",
+  },  
+  {
+    id: 9,
+    url: "https://www.freepik.com/",
     text: "Email Icon made by Freepik",
   },
 ]
