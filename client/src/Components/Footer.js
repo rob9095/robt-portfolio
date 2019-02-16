@@ -27,6 +27,9 @@ export default class Footer extends Component {
                 <a title="Codepen" href="https://codepen.io/rob9095">
                   <i className="fa fa-codepen" />
                 </a>
+                <a title="Dribbble" href="https://dribbble.com/rob9095">
+                  <i className="fa fa-dribbble" />
+                </a>
                 <a title="LinkedIn" href="https://linkedin.com/in/rob9095">
                   <i className="fa fa-linkedin" />
                 </a>
@@ -37,4 +40,4 @@ export default class Footer extends Component {
         <CreditModal showModal={this.state.showCreditModal} onToggle={this.toggleCreditModal} />
       </div>;
   }
-} 
+}
