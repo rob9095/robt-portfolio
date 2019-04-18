@@ -198,7 +198,7 @@ header nav.mobile-nav button {
   left: 0;
   z-index: 3;
   background-size: cover;
-  background-image: url("./img/purple-projects-bg.png");
+  background-image: url("./img/purple-projects-bg.webp");
 }
 
 .menu-item {
@@ -318,7 +318,7 @@ section.about {
   min-height: 700px;
   justify-content: center;
   width: 100%;
-  background-image: url("./img/about-bg.png");
+  background-image: url("./img/about-bg.webp");
   text-align: left;
 }
 
@@ -349,7 +349,7 @@ section.projects {
   left: 0;
   width: 100%;
   background-size: cover;
-  background-image: url("./img/purple-projects-bg.png");
+  background-image: url("./img/purple-projects-bg.webp");
   color: #fff;
 }
 

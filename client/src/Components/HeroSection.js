@@ -1,6 +1,6 @@
 import React from "react";
-import heroBg from "../img/purple-hero-original.png";
-import heroImg from "../img/hero-image-1.png";
+import heroBg from "../img/purple-hero-original.webp";
+import heroImg from "../img/hero-image-1.webp";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function HeroSection() {
@@ -19,7 +19,7 @@ function HeroSection() {
             </AnchorLink>
           </div>
           <div className="hero-image">
-            <img src={heroImg} alt="" />
+            <img src={heroImg} alt="web developer" />
           </div>
         </div>
       </div>
