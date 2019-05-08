@@ -2,12 +2,14 @@
 
 @font-face {
   font-family: Gilroy;
+  font-display: auto;
   src: url("./fonts/Gilroy-Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: Gilroy;
   font-weight: bold;
+  font-display: auto;
   src: url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
 
@@ -20,7 +22,7 @@
 html {
   font: normal 16px sans-serif;
   color: #555;
-  font-family: Gilroy;
+  font-family: Gilroy, Arial, sans-serif;
   width: 100%;
 }
 
@@ -86,7 +88,7 @@ section p {
   line-height: 2;
   margin-bottom: 30px;
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat",, Arial, sans-serif;
 }
 
 @media (max-width: 800px) {
@@ -198,7 +200,7 @@ header nav.mobile-nav button {
   left: 0;
   z-index: 3;
   background-size: cover;
-  background-image: url("./img/purple-projects-bg.webp");
+  background-image: url("./img/purple-projects-bg.png");
 }
 
 .menu-item {
@@ -318,7 +320,7 @@ section.about {
   min-height: 700px;
   justify-content: center;
   width: 100%;
-  background-image: url("./img/about-bg.webp");
+  background-image: url("./img/about-bg.png");
   text-align: left;
 }
 
@@ -349,7 +351,7 @@ section.projects {
   left: 0;
   width: 100%;
   background-size: cover;
-  background-image: url("./img/purple-projects-bg.webp");
+  background-image: url("./img/purple-projects-bg.png");
   color: #fff;
 }
 
@@ -378,7 +380,7 @@ section.projects {
 }
 
 .project-card p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: .80rem;
   min-height: 50px;
   text-align: center;
@@ -487,7 +489,7 @@ footer .logo {
 
 footer .logo .btn-link {
   font-size: 12px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', Arial, sans-serif;
   background: transparent;
   border: none;
   color: #fff;
@@ -544,7 +546,7 @@ footer .social-icons i:hover {
 .modal-content a {
   color: #555;
   font-size: 12px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .modal-content ul {

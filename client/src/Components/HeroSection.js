@@ -1,6 +1,6 @@
 import React from "react";
-import heroBg from "../img/purple-hero-original.webp";
-import heroImg from "../img/hero-image-1.webp";
+import heroBg from "../img/purple-hero-original.png";
+import heroImg from "../img/hero-image-1.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function HeroSection() {
