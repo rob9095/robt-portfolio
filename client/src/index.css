@@ -34,12 +34,11 @@ nav {
 
 a {
   text-decoration: none;
-  opacity: .9;
   color: #fff;
 }
 
 a:hover {
-  opacity: 1;
+  color: rgba(255,255,255,.95);
 }
 
 a.purple {
@@ -288,22 +287,12 @@ header nav.mobile-nav button {
 }
 
 @media (max-width: 800px) {
-  .hero {
-    min-height: 600px;
-  }
-
   .hero h1 {
     font-size: 40px;
   }
-
   .hero p {
     padding: 15px 40px;
   }
-
-  section.hero {
-    padding-top: 100px;
-  }
-
   .hero-image {
     width: 100%;
     text-align: center;

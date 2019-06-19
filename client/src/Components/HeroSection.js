@@ -26,7 +26,7 @@ class HeroSection extends Component {
             </AnchorLink>
             </div>
             <div className="hero-image">
-              <img onLoad={(heroImgLoaded = true)=>this.setState({heroImgLoaded})} src={heroImg} alt="web developer" />
+              <img style={{...!this.state.heroImgLoaded && {display: 'none'}}} onLoad={(heroImgLoaded = true)=>this.setState({heroImgLoaded})} src={heroImg} alt="web developer" />
               {!this.state.heroImgLoaded && (
                 <div style={{ width: '100%', height: '100%', minHeight: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <i style={{ fontSize: 50, color: '#ffffffb3' }} className="fa fa-spinner fa-pulse" />
