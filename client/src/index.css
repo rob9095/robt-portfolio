@@ -353,6 +353,7 @@ section.projects {
   width: 100%;
   background-size: cover;
   background-image: url("./img/purple-projects-bg.png");
+  background: '#422e7e';
   color: #fff;
 }
 
