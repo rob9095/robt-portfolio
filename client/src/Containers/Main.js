@@ -1,13 +1,13 @@
 
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Switch, Route, withRouter } from "react-router-dom";
 import Header from '../Components/Header';
-import Footer from "../Components/Footer";
-import ContactSection from '../Components/ContactSection';
-import AboutSection from '../Components/AboutSection';
-import HeroSection from '../Components/HeroSection';
-import WorkSection from '../Components/WorkSection';
-import NotFound from '../Components/NotFound';
+import HeroSection from "../Components/HeroSection";
+const ContactSection = lazy(()=> import('../Components/ContactSection'));
+const AboutSection = lazy(()=> import('../Components/AboutSection'));
+const Footer = lazy(() => import('../Components/Footer'));
+const WorkSection = lazy(() => import('../Components/WorkSection'));
+const NotFound = lazy(() => import('../Components/NotFound'));
 
 function Main() {
   return (
@@ -20,14 +20,28 @@ function Main() {
             <div>
               <Header useAnchorLinks />
               <HeroSection />
-              <AboutSection />
-              <WorkSection />
-              <ContactSection />
-              <Footer />
+              <Suspense fallback={
+                <section style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <i style={{fontSize: 50, color: '#442467'}} className="fa fa-spinner fa-pulse" />
+                </section>
+                }>
+                <AboutSection />
+                <WorkSection />
+                <ContactSection />
+                <Footer />
+              </Suspense>
             </div>
           )}
         />
-        <Route render={() => <NotFound />} />
+        <Route render={() => 
+          <Suspense fallback={
+            <section style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <i style={{ fontSize: 50, color: '#442467' }} className="fa fa-spinner fa-pulse" />
+            </section>
+          }>
+            <NotFound />
+          </Suspense>
+        } />
       </Switch>
     </div>
   )

@@ -1,15 +1,16 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 
 @font-face {
   font-family: Gilroy;
-  font-display: auto;
+  font-display: swap;
   src: url("./fonts/Gilroy-Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: Gilroy;
   font-weight: bold;
-  font-display: auto;
+  font-display: swap;
   src: url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
 
@@ -20,9 +21,9 @@
 }
 
 html {
-  font: normal 16px sans-serif;
+  font-size: 16px;
   color: #555;
-  font-family: Gilroy, Arial, sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   width: 100%;
 }
 
@@ -80,7 +81,9 @@ hr {
 }
 
 section h3.title {
-  font: bold 32px "Gilroy", sans-serif;
+  font-size: 32px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold; 
   margin-bottom: 30px;
 }
 
@@ -88,7 +91,7 @@ section p {
   line-height: 2;
   margin-bottom: 30px;
   font-size: 16px;
-  font-family: "Montserrat",, Arial, sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 @media (max-width: 800px) {
@@ -249,6 +252,12 @@ header nav.mobile-nav button {
   background-color: #4c2d80;
 }
 
+.hero-image {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
 .hero-image img {
   max-width: 715px;
 }
@@ -261,13 +270,16 @@ header nav.mobile-nav button {
   text-align: left;
 }
 
-.hero h1 {
-  font: bold 50px "Gilroy", sans-serif;
+.hero h1, .not-found h1 {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Gilroy", "Arial", sans-serif;
   margin-bottom: 15px;
 }
 
-.hero p {
-  font: normal 18px "Montserrat", sans-serif;
+.hero p, .not-found p {
+  font-size: 18px;
+  font-family: "Montserrat", "Arial", sans-serif;
   margin-bottom: 40px;
 }
 
@@ -380,7 +392,7 @@ section.projects {
 }
 
 .project-card p {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat', "Arial", sans-serif;
   font-size: .80rem;
   min-height: 50px;
   text-align: center;
@@ -546,7 +558,7 @@ footer .social-icons i:hover {
 .modal-content a {
   color: #555;
   font-size: 12px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .modal-content ul {
@@ -576,16 +588,6 @@ footer .social-icons i:hover {
   background-size: cover;
   z-index: -1;
   background-color: #4c2d80;
-}
-
-.not-found h1 {
-  font: bold 50px "Gilroy", sans-serif;
-  margin-bottom: 15px;
-}
-
-.not-found p {
-  font: normal 18px "Montserrat", sans-serif;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 800px) {

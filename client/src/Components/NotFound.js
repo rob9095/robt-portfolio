@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
-import heroBg from "../img/purple-hero-original.webp";
+import heroBg from "../img/purple-hero-original.png";
 import Header from './Header';
 
 function NotFound() {

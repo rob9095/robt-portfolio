@@ -84,7 +84,12 @@ class Slider extends Component {
                     <h2>{p.name}</h2>
                     <hr />
                   </div>
-                  <img alt={p.name + " icon"} src={require(`../img/${p.icon}`)} />
+                  <img onLoad={()=>this.setState({[p.name]: true})} alt={p.name + " icon"} src={require(`../img/${p.icon}`)} />
+                  {!this.state[p.name] && (
+                    <div style={{ width: '100%', height: '100%', background: 'rgba(255,255,255,.25)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <i style={{ fontSize: 50, color: '#442467' }} className="fa fa-spinner fa-pulse" />
+                    </div>
+                  )}
                   <p>{p.skills.map((s, i) => i + 1 === p.skills.length ? s + "." : s + ", ")}</p>
                   <a title={p.name} href={p.url} className="btn">View Project</a>
                 </div>
