@@ -8,7 +8,7 @@ function AboutSection() {
         <div className="about-wrapper flex-col-mobile">
           <div className="about-text">
             <p>
-              I'm a passionate problem solver, full-stack web devloper, and
+              I'm a passionate problem solver, full-stack web developer, and
               software support engineer currently based in Dana Point,
               California. My specialties are JavaScript (ES6), Node.js,
               Express, ReactJS, Redux, MongoDB, MySQL, HTML5, and CSS3.
