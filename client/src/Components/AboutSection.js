@@ -8,13 +8,13 @@ function AboutSection() {
         <div className="about-wrapper flex-col-mobile">
           <div className="about-text">
             <p>
-              I'm a passionate problem solver, full-stack engineer, and
-              eCommerce systems analyst currently based in Dana Point,
+              I'm a passionate problem solver, full-stack web devloper, and
+              software support engineer currently based in Dana Point,
               California. My specialties are JavaScript (ES6), Node.js,
               Express, ReactJS, Redux, MongoDB, MySQL, HTML5, and CSS3.
               I enjoy learning more about technology and using my
               knowledge to solve real world problems. I'm also a <a className="purple" href="https://grow.google/programs/udacity/">Grow
-              with Google Scholar</a> and a certified graduate of the <a className="purple" href="https://confirm.udacity.com/FGDNZCAG">Udacity Front End Web Developer Nanodegree</a> program. Please
+              with Google Scholar</a> and a certified graduate of the <a className="purple" href="https://confirm.udacity.com/FGDNZCAG">Udacity Front End Web Developer Nanodegree</a> program. Right now I'm working at <a className="purple" href="https://www.amazon.com/AmazonFresh">Amazon</a> and helping to re-invent the way consumers shop for groceries. Please
               contact me if you'd like to work together or just to chat.
                 </p>
           </div>
